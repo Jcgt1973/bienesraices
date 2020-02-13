@@ -16,6 +16,7 @@ img {
     max-width: 100%;
 }
 .contenedor {
+    width: 95%;
     max-width: 120rem; /** =1200px**/
     margin: 0 auto;
 }
@@ -61,6 +62,14 @@ h4 {
     text-transform: uppercase;
     text-align: center;
     border: none;
+    display: block;
+    flex: 0 0 100%;
+}
+@media (min-width: 768px) {
+    .boton {
+        display: inline-block;
+        flex: 0 0 auto;
+    }
 }
 .boton:hover {
     cursor: pointer;
@@ -89,6 +98,13 @@ h4 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .contenido-header {
+        text-align: left;
+    } 
 }
 
 .contenido-header h1 {
@@ -98,39 +114,60 @@ h4 {
     line-height: 2;
 }
 .barra {
+    
+    padding-top: 3rem;
+}
+@media (min-width: 768px) {
+    .barra {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 3rem;
+    }
 }
 
 /** Navegación **/
 .navegacion a {
     color: #ffffff;
     text-decoration: none;
-    font-size: 1.8rem; /** = 18px**/
-    margin-right: 2rem;
+    font-size: 2.2rem; /** = 18px**/
     font-family: 'Times New Roman', Times, serif;
+    display: block;
+}
+@media (min-width: 768px) {
+    .navegacion a {
+        display: inline-block;
+        margin-right: 2rem;
+        font-size: 1.8rem; /** = 18px**/
+    }
+    .navegacion a:last-of-type {
+    margin-right: 0px;
+    }
 }
 
 .navegacion a:hover {
     color: #71B100;
 }
 
-.navegacion a:last-of-type {
-    margin-right: 0px;
-}
+
 
 /** Iconos Nosotros **/
-.iconos-nosotros {
+@media (min-width: 768px) {
+    .iconos-nosotros {
     display:flex;
     justify-content: space-between;
+    }
 }
+
 .icono {
-    flex-basis: calc(33.3% - 1rem);
     text-align: center;
 }
-.icono {
+@media (min-width: 768px) {
+    .icono {
+        flex-basis: calc(33.3% - 1rem);
+    }
+}
+
+.icono h3 {
     text-transform: uppercase;
 }
 /** Anuncios **/
