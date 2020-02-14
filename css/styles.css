@@ -184,7 +184,29 @@ h4 {
     color: #71B100;
 }
 
+/* Mobile Menu */
+.mobile-menu img {
+    width: 5rem;
+}
 
+@media (min-width: 768px) {
+    .mobile-menu{
+        display: none;
+    }
+
+}
+.navegacion:target {
+    display: block;
+}
+.navegacion {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .navegacion {
+        display: block;
+    }
+}
 /** Iconos Nosotros **/
 
 @media (min-width: 768px) {
@@ -416,11 +438,15 @@ h4 {
 
 /**Nosotros**/
 
-.contenido-nosotros {
+@media (min-width: 768px) {
+    .contenido-nosotros {
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-column-gap: 2rem;
+    grid-column-gap: 2rem;  
+    }
 }
+
+
 
 .contenido-nosotros blockquote {
     font-weight: 900;
